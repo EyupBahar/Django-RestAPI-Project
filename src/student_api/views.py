@@ -73,8 +73,9 @@ def student_add_api(request):
         }
         return JsonResponse(data, status=201)
 
+#Serializer
 
-@api_view(['GET', 'POST'])
+@api_view(['GET', 'POST']) # DECORATOR  
 def student_api(request):
     if request.method == 'GET':
         students = Student.objects.all()
